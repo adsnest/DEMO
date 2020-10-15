@@ -6,5 +6,21 @@ stages:
       version: 9.0.3
       name: noordev
       targetNamespace: default
+- name: github
+  steps:
+  - publishCatalogConfig:
+      path: Demo
+      catalogTemplate: deompush
+      version: "1.0"
+      gitUrl: https://github.com/adsnest/DEMO.git
+      gitBranch: master
+      gitAuthor: Adsnest
+      gitEmail: info@adsnest.com
+    envFrom:
+    - sourceName: key-imak
+      sourceKey: DEPLOY_KEY
+      targetKey: DEPLOY_KEY
+  when:
+    event: {}
 timeout: 60
 notification: {}
