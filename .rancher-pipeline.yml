@@ -9,7 +9,7 @@ stages:
 - name: github
   steps:
   - publishCatalogConfig:
-      path: DEMO
+      path: /
       catalogTemplate: deompush
       version: "1.0"
       gitUrl: https://github.com/adsnest/DEMO.git
