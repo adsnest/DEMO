@@ -1,0 +1,10 @@
+stages:
+- name: run file
+  steps:
+  - applyAppConfig:
+      catalogTemplate: cattle-global-data:library-wordpress
+      version: 9.0.3
+      name: noordev
+      targetNamespace: default
+timeout: 60
+notification: {}
