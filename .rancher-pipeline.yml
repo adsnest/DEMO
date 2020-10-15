@@ -17,9 +17,12 @@ stages:
       gitAuthor: Adsnest
       gitEmail: info@adsnest.com
     envFrom:
-    - sourceName: key-imak
-      sourceKey: DEPLOY_KEY
-      targetKey: DEPLOY_KEY
+    - sourceName: git
+      sourceKey: USERNAME
+      targetKey: USERNAME
+    - sourceName: git
+      sourceKey: PASSWORD
+      targetKey: PASSWORD
   when:
     event: {}
 timeout: 60
